@@ -26,17 +26,26 @@
 }
 
 :root {
-  --clr-white: hsl(0deg 0 100);
-  --clr-black: hsl(0deg 0 5);
-  --clr-base: var(--clr-white);
-  --clr-base-variant: hsl(0deg 0 94);
-  --clr-content-primary: var(--clr-black);
-  --clr-content-secondary: hsl(0deg 0 30);
-  --clr-base-inverse: var(--clr-content-primary);
-  --clr-content-primary-inverse: var(--clr-base);
-  --clr-border: hsl(0deg 0 5 / 10%);
-  --clr-accent: hsl(210deg 75 47);
-  --clr-link-visited: hsl(285deg 75 45);
+  /* Alpha */
+  --alpha-border: 15%;
+
+  /* Color scheme */
+  --clr-black: hsl(0deg 0% 5%);
+  --clr-light: hsl(0deg 0% 100%);
+  --clr-base: hsl(0deg 0% 100%);
+  --clr-base-secondary: hsl(from var(--clr-base) h s calc(l - 5));
+  --clr-content: hsl(0deg 0% 5%);
+  --clr-content-secondary: hsl(from var(--clr-content) h s calc(l + 25));
+  --clr-accent: hsl(330deg 75% 50%);
+  --clr-border: hsl(from var(--clr-content) h s l / var(--alpha-border));
+  --clr-link: hsl(210deg 75% 50%);
+  --clr-link-visited: hsl(270deg 75% 50%);
+
+  /* Hover */
+  --hover-clr: hsl(from var(--clr-content) h s l / var(--alpha-border));
+  --hover-clr-inverted: hsl(from var(--clr-base) h s l / var(--alpha-border));
+  --hover-size: 0 0 9999px 9999px;
+  --hover-link-amount: 50%;
 }
 
 .app {
@@ -45,9 +54,11 @@
   grid-template-columns: minmax(0, 1fr);
   min-height: 100dvh;
   background-color: var(--clr-base);
-  color: var(--clr-content-primary);
-  fill: var(--clr-content-primary);
+  color: var(--clr-content);
+  fill: var(--clr-content);
 }
+
+/* --Buttons-- */
 
 button {
   min-height: 44px;
@@ -56,15 +67,23 @@ button {
   background: none;
 }
 
+button:hover {
+  box-shadow: inset var(--hover-size) var(--hover-clr);
+}
+
 .btn--inverted {
-  background-color: var(--clr-base-inverse);
-  color: var(--clr-content-primary-inverse);
+  background-color: var(--clr-content);
+  color: var(--clr-base);
+}
+
+.btn--inverted:hover {
+  box-shadow: inset var(--hover-size) var(--hover-clr-inverted);
 }
 
 /* --Links-- */
 
 a {
-  color: var(--clr-accent);
+  color: var(--clr-link);
 }
 
 header a,
@@ -75,6 +94,10 @@ footer a,
 .comment__user {
   color: inherit;
   text-decoration: none;
+}
+
+a:hover {
+  filter: brightness(var(--hover-link-amount));
 }
 
 a:visited {
