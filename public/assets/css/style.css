@@ -90,11 +90,11 @@ aside {
 footer {
   padding: .5rem;
   background-color: white;
-}
 
-footer * {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: .25rem;
+  & * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+  }
 }
