@@ -146,6 +146,7 @@ export default {
 
         // Typography
         "color",
+        "fill",
         "font",
         "font-family",
         "font-size",
