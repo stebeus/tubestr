@@ -26,12 +26,12 @@ export default {
       "vw",
     ],
 
-    /* ========== PLUGINS ========== */
+    /* ===PLUGIN RULES=== */
 
     "order/order": ["custom-properties", "declarations"],
     "order/properties-order": [
       [
-        /* Positioning */
+        // Positioning
         "position",
         "top",
         "right",
@@ -39,7 +39,7 @@ export default {
         "left",
         "z-index",
 
-        /* Display & Flow */
+        // Display & Flow
         "display",
         "visibility",
         "float",
@@ -48,7 +48,7 @@ export default {
         "overflow-x",
         "overflow-y",
 
-        /* Flex */
+        // Flex
         "flex",
         "flex-grow",
         "flex-shrink",
@@ -57,7 +57,7 @@ export default {
         "flex-wrap",
         "flex-flow",
 
-        /* Grid */
+        // Grid
         "grid",
         "grid-template",
         "grid-template-rows",
@@ -74,7 +74,7 @@ export default {
         "grid-column-end",
         "grid-area",
 
-        /* Flex/Grid Alignment & Spacing */
+        // Flex/Grid Alignment & Spacing
         "order",
         "align-content",
         "align-items",
@@ -89,7 +89,7 @@ export default {
         "row-gap",
         "column-gap",
 
-        /* Box Model / Dimensions */
+        // Box Model / Dimensions
         "box-sizing",
         "width",
         "min-width",
@@ -98,7 +98,7 @@ export default {
         "min-height",
         "max-height",
 
-        /* Multi-Column Layout */
+        // Multi-Column Layout
         "columns",
         "column-width",
         "column-count",
@@ -108,7 +108,7 @@ export default {
         "column-rule-style",
         "column-rule-color",
 
-        /* Spacing */
+        // Spacing
         "margin",
         "margin-top",
         "margin-right",
@@ -120,7 +120,7 @@ export default {
         "padding-bottom",
         "padding-left",
 
-        /* Borders & Outline */
+        // Borders & Outline
         "border",
         "border-width",
         "border-style",
@@ -133,7 +133,7 @@ export default {
         "outline",
         "outline-offset",
 
-        /* Background */
+        // Background
         "background",
         "background-color",
         "background-image",
@@ -144,7 +144,7 @@ export default {
         "background-origin",
         "background-attachment",
 
-        /* Typography */
+        // Typography
         "color",
         "font",
         "font-family",
@@ -162,13 +162,13 @@ export default {
         "word-break",
         "word-spacing",
 
-        /* Visual Effects */
+        // Visual Effects
         "opacity",
         "box-shadow",
         "mix-blend-mode",
         "filter",
 
-        /* Motion */
+        // Motion
         "animation",
         "animation-name",
         "animation-duration",
@@ -188,7 +188,7 @@ export default {
         "transition-timing-function",
         "transition-delay",
 
-        /* Miscellaneous */
+        // Miscellaneous
         "cursor",
         "pointer-events",
         "content",
