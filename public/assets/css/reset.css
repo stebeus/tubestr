@@ -125,9 +125,9 @@ textarea {
 }
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   appearance: auto;
 }
 
@@ -158,7 +158,7 @@ progress {
   1. Correct the odd appearance in Chrome and Safari
   2. Correct the outline style in Safari
 */
-[type='search'] {
+[type="search"] {
   /* 1 */
   outline-offset: -2px;
 

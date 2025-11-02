@@ -18,7 +18,7 @@
 
 button {
   min-height: 44px;
-  padding: .5em .75em;
+  padding: 0.5em 0.75em;
   border: none;
   background: none;
 }
@@ -45,8 +45,8 @@ header {
 /* --Video Card-- */
 
 .video-card__meta-item::before {
-  margin: 0 .5rem;
-  font-size: .75rem;
+  margin: 0 0.5rem;
+  font-size: 0.75rem;
   content: "•";
 }
 
@@ -69,7 +69,7 @@ header {
 .video-actions {
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: .5rem
+  gap: 0.5rem;
 }
 
 .video-actions__channel,
@@ -95,7 +95,7 @@ header {
 .comment__btn {
   display: flex;
   align-items: center;
-  gap: .5rem
+  gap: 0.5rem;
 }
 
 .comment__btn {
@@ -111,13 +111,13 @@ aside {
 /* ===FOOTER=== */
 
 footer {
-  padding: .5rem;
+  padding: 0.5rem;
   background-color: white;
 
   & * {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: .25rem;
+    gap: 0.25rem;
   }
 }
