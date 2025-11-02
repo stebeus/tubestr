@@ -1,3 +1,14 @@
+/*
+  CSS DIRECTORY
+    1. =GLOBAL
+    2. =HEADER
+    3. =MAIN
+    4. =SIDEBAR
+    5. =FOOTER
+*/
+
+/* ===GLOBAL=== */
+
 .app {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -11,6 +22,8 @@ button {
   border: none;
   background: none;
 }
+
+/* ===HEADER=== */
 
 header {
   position: sticky;
@@ -27,6 +40,10 @@ header {
   align-items: center;
 }
 
+/* ===MAIN=== */
+
+/* --Video Card-- */
+
 .video-card__meta-item::before {
   margin: 0 .5rem;
   font-size: .75rem;
@@ -37,6 +54,8 @@ header {
   margin: 0;
   content: none;
 }
+
+/* --Video Page-- */
 
 .video-actions,
 .video-actions__channel,
@@ -83,9 +102,13 @@ header {
   background: grey;
 }
 
+/* ===SIDEBAR=== */
+
 aside {
   display: none;
 }
+
+/* ===FOOTER=== */
 
 footer {
   padding: .5rem;
