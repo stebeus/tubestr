@@ -152,6 +152,8 @@ export default {
         "font-weight",
         "font-style",
         "font-variant",
+        "font-feature-settings",
+        "font-display",
         "line-height",
         "letter-spacing",
         "text-align",
