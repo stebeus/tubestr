@@ -1,67 +1,56 @@
-/* 1. Use a more-intuitive box-sizing model */
+/*
+  CSS DIRECTORY
+    1. =GLOBAL
+    2. =TYPOGRAPHY
+    3. =MEDIA
+    4. =TABULAR DATA
+    5. =FORMS
+    6. =INTERACTIVE
+*/
+
+/* ===GLOBAL=== */
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* 2. Remove default margins/paddings and calculate line-height */
 * {
   margin: 0;
   padding: 0;
   line-height: calc(1em + 0.5rem);
 }
 
-/* 3. Enable keyword animations */
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    interpolate-size: allow-keywords;
-  }
+/* ===TYPOGRAPHY=== */
+
+html {
+  font-family: system-ui, sans-serif;
+  text-size-adjust: 100%;
+  tab-size: 4;
 }
 
-/* 4. Improve text rendering */
 body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* 5. Improve media defaults */
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-/* 6. Inherit fonts for form controls */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* 7. Improve element hovering */
-button:hover {
-  cursor: pointer;
-}
-
-/* 8. Avoid text overflows */
-p,
+/* Avoid overflow */
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+figcaption,
+li,
+p {
   overflow-wrap: break-word;
 }
 
-/* 9. Improve line wrapping */
-p,
+/* Improve line wrapping */
+figcaption,
 li,
-figcaption {
+p {
   text-wrap: pretty;
 }
 
@@ -74,9 +63,129 @@ h6 {
   text-wrap: balance;
 }
 
-/* 10. Create a root stacking context */
-#root,
-/* stylelint-disable-next-line */
-#__next {
-  isolation: isolate;
+/* Consistent semantics */
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* ===MEDIA=== */
+
+canvas,
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* ===TABULAR DATA=== */
+
+table {
+  border-color: currentcolor;
+}
+
+/* ===FORMS=== */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  appearance: auto;
+}
+
+/* Improve hover accessibility */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="checkbox"],
+input[type="radio"],
+label[data-action="upload"],
+select {
+  cursor: pointer;
+}
+
+/* Correct vertical alignment in Chrome and Safari */
+progress {
+  vertical-align: baseline;
+}
+
+/* Correct the cursor style of increment and decrement buttons in Safari */
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+  1. Correct the odd appearance in Chrome and Safari
+  2. Correct the outline style in Safari
+*/
+[type='search'] {
+  /* 1 */
+  outline-offset: -2px;
+
+  /* 2 */
+  appearance: textfield;
+}
+
+/* Remove the inner padding in Chrome and Safari on macOS */
+::-webkit-search-decoration {
+  appearance: none;
+}
+
+/*
+  1. Correct the inability to style clickable types in iOS and Safari
+  2. Change font properties to 'inherit' in Safari
+*/
+::-webkit-file-upload-button {
+  /* 1 */
+  font: inherit;
+
+  /* 2 */
+  appearance: auto;
+}
+
+/* ===INTERACTIVE=== */
+
+/* Correct display in Chrome and Safari */
+summary {
+  display: list-item;
 }
