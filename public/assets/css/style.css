@@ -46,6 +46,21 @@
   --hover-clr-inverted: hsl(from var(--clr-base) h s l / var(--alpha-border));
   --hover-size: 0 0 9999px 9999px;
   --hover-link-amount: 50%;
+
+  /* Typography */
+  --ff: inter, system-ui, sans-serif;
+  --fs-xl: 1.375rem;
+  --fs-lg: 1.125rem;
+  --fs-md: 1rem;
+  --fs-sm: 0.875rem;
+  --fw-bold: 700;
+  --fw-medium: 500;
+  --fw-regular: 400;
+  --font-h1: var(--fw-bold) var(--fs-xl) var(--ff);
+  --font-h2: var(--fw-bold) var(--fs-lg) var(--ff);
+  --font-subheading: var(--fw-medium) var(--fs-md) var(--ff);
+  --font-primary: var(--fw-regular) var(--fs-md) var(--ff);
+  --font-secondary: var(--fw-regular) var(--fs-sm) var(--ff); /* fixed typo */
 }
 
 .app {
@@ -56,6 +71,33 @@
   background-color: var(--clr-base);
   color: var(--clr-content);
   fill: var(--clr-content);
+  font: var(--font-primary);
+
+  & * {
+    font-feature-settings: "cv01", "cv05", "cv07";
+  }
+}
+
+/* --Typography-- */
+
+h1 {
+  font: var(--font-h1);
+}
+
+h2 {
+  font: var(--font-h2);
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font: var(--font-subheading);
+}
+
+b,
+strong {
+  font-weight: var(--fw-bold);
 }
 
 /* --Buttons-- */
@@ -225,7 +267,7 @@ footer {
   color: var(--clr-content-secondary);
   fill: var(--clr-content-secondary);
 
-  & * {
+  &.footer__link {
     display: flex;
     align-items: center;
     justify-content: center;
