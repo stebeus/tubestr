@@ -32,7 +32,7 @@
   --clr-base-variant: hsl(0deg 0 94);
   --clr-content-primary: var(--clr-black);
   --clr-content-secondary: hsl(0deg 0 30);
-  --clr-base-inverse: var(var(--clr-content-primary));
+  --clr-base-inverse: var(--clr-content-primary);
   --clr-content-primary-inverse: var(--clr-base);
   --clr-border: hsl(0deg 0 5 / 10%);
   --clr-accent: hsl(210deg 75 47);
