@@ -267,7 +267,7 @@ footer {
   color: var(--clr-content-secondary);
   fill: var(--clr-content-secondary);
 
-  &.footer__link {
+  & .footer__link {
     display: flex;
     align-items: center;
     justify-content: center;
