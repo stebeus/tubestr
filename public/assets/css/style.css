@@ -9,6 +9,22 @@
 
 /* ===GLOBAL=== */
 
+@font-face {
+  font-family: inter;
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("/assets/fonts/inter-variable.woff2");
+}
+
+@font-face {
+  font-family: inter;
+  font-weight: 400 900;
+  font-style: italic;
+  font-display: swap;
+  src: url("/assets/fonts/inter-italic-variable.woff2");
+}
+
 .app {
   display: grid;
   grid-template-rows: auto 1fr auto;
