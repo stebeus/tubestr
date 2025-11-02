@@ -56,6 +56,11 @@ button {
   background: none;
 }
 
+.btn--inverted {
+  background-color: var(--clr-base-inverse);
+  color: var(--clr-content-primary-inverse);
+}
+
 /* --Links-- */
 
 a {
@@ -164,10 +169,8 @@ header {
   background-color: var(--clr-base-variant);
 }
 
-.video-actions__btn--follow {
+.video-actions__btn-follow {
   padding: 0 2em;
-  background-color: var(--clr-base-inverse);
-  color: var(--clr-content-primary-inverse);
 }
 
 .video-actions__btn--rate {
